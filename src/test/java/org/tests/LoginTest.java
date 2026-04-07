@@ -27,6 +27,7 @@ public class LoginTest extends BaseClass {
         System.out.println("Redirected URL: " + actualUrl);
 
         Assert.assertTrue(isHome, "User not redirected to Home page");
+        System.out.println("redirected to Home page successfully");
     }
 
 }
