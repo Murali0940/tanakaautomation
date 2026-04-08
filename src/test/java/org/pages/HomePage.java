@@ -19,8 +19,16 @@ public class HomePage {
         return page.url();
     }
 
-    public void search_With_One_Input(String input) {
+    public void search_With_One_Input(String oneword) {
         page.locator("//input[@id='home-search-input' or @placeholder='Wiki内を検索']")
-                .fill(input);
+                .fill(oneword);
+        page.locator("//button[text()='検索']").click();
     }
+
+    public void search_With_Two_Input(String twowords) {
+        page.locator("//input[@id='home-search-input' or @placeholder='Wiki内を検索']")
+                .fill(twowords);
+        page.locator("//button[text()='検索']").click();
+    }
+
 }
