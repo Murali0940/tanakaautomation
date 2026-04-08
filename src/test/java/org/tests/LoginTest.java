@@ -5,11 +5,14 @@ import org.pages.*;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import com.aventstack.extentreports.ExtentTest;
+
 @Listeners(org.listeners.TestListener.class)
 public class LoginTest extends BaseClass {
 
     LoginPage loginPage;
     HomePage homePage;
+    ExtentTest test;
 
     @BeforeMethod
     public void init() {
@@ -21,11 +24,13 @@ public class LoginTest extends BaseClass {
     public void tanakaLogin() {
 
         loginPage.login("admin", "admin");
+        test.info("Entered username and password");
 
         Assert.assertTrue(homePage.isUserOnHomePage(),
                 "User not redirected to Home page");
 
         System.out.println("Login successful");
+        test.info("Login successful");
     }
 
     @Test(priority = 2)

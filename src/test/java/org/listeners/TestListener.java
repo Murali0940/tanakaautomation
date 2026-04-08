@@ -28,6 +28,13 @@ public class TestListener implements ITestListener {
         test.addScreenCaptureFromPath(path);
     }
 
+    @Override
+    public void onTestSkipped(ITestResult result) {
+        System.out.println("⚠️ Test Skipped: " + result.getName());
+
+        test.skip("Test Skipped");
+    }
+
     public void onFinish(ITestContext context) {
         extent.flush();
         EmailUtil.sendReport();
