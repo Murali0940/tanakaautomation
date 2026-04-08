@@ -3,7 +3,7 @@
 <suite name="TanakaSuite" verbose="2">
     <test name="BaseTest">
         <classes>
-            <class name="org.base.BaseClassTest"/>
+            <class name="org.tests.LoginTest"/>
         </classes>
     </test>
 </suite>

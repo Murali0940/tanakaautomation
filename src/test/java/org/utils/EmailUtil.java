@@ -11,8 +11,8 @@ public class EmailUtil {
         try {
 
             EmailAttachment attachment = new EmailAttachment();
-            attachment.setPath("reports/extent-report.html");
-            attachment.setName("Automation Report");
+            attachment.setPath(ExtentManager.reportPath);
+            attachment.setName("Automation Report.html");
 
             MultiPartEmail email = new MultiPartEmail();
             email.setHostName("smtp.gmail.com");
