@@ -1,33 +1,33 @@
 package org.base;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.AfterSuite;
+import com.microsoft.playwright.*;
+import org.testng.annotations.*;
 
-/**
- * BaseClass - Base class for all test classes
- * Contains common WebDriver setup and teardown methods
- * Provides a single driver instance that can be used across the project
- */
 public class BaseClass {
 
-    public static WebDriver driver;
+    public static Playwright playwright;
+    public static Browser browser;
+    public static BrowserContext context;
+    public static Page page;
 
     @BeforeSuite
     public void setup() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://tanaka-wiki.com/");
+        playwright = Playwright.create();
+
+        browser = playwright.chromium().launch(
+                new BrowserType.LaunchOptions().setHeadless(false) // Jenkins ready
+        );
+
+        context = browser.newContext();
+        page = context.newPage();
+
+        page.navigate("https://tanaka-wiki.com/");
     }
 
     @AfterSuite
     public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
+        context.close();
+        browser.close();
+        playwright.close();
     }
-
 }

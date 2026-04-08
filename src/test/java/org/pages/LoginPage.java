@@ -1,39 +1,18 @@
 package org.pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import com.microsoft.playwright.Page;
 
 public class LoginPage {
 
-    WebDriver driver;
+    private Page page;
 
-    // Locators
-    private By username = By.xpath("//input[@placeholder='ユーザー名']");
-    private By password = By.xpath("//input[@placeholder='パスワード']");
-    private By loginBtn = By.xpath("//button[text()='ログイン']");
-
-    // Constructor
-    public LoginPage(WebDriver driver) {
-        this.driver = driver;
-    }
-
-    // Actions
-    public void enterUsername(String user) {
-        driver.findElement(username).sendKeys(user);
-    }
-
-    public void enterPassword(String pass) {
-        driver.findElement(password).sendKeys(pass);
-    }
-
-    public void clickLogin() {
-        driver.findElement(loginBtn).click();
+    public LoginPage(Page page) {
+        this.page = page;
     }
 
     public void login(String user, String pass) {
-        enterUsername(user);
-        enterPassword(pass);
-        clickLogin();
+        page.locator("//input[@placeholder='ユーザー名']").fill(user);
+        page.locator("//input[@placeholder='パスワード']").fill(pass);
+        page.locator("//button[text()='ログイン']").click();
     }
-
 }

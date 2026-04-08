@@ -1,33 +1,35 @@
 package org.tests;
 
 import org.base.BaseClass;
-import org.pages.HomePage;
-import org.pages.LoginPage;
+import org.pages.*;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 @Listeners(org.listeners.TestListener.class)
 public class LoginTest extends BaseClass {
 
-    @Test
-    public void tanakaLogin() {
+    LoginPage loginPage;
+    HomePage homePage;
 
-        // Page Objects
-        LoginPage loginPage = new LoginPage(driver);
-        HomePage homePage = new HomePage(driver);
-
-        // Perform Login
-        loginPage.login("admin", "admin");
-
-        // Validate Navigation
-        boolean isHome = homePage.isUserOnHomePage();
-
-        String actualUrl = homePage.getCurrentUrl();
-        System.out.println("Redirected URL: " + actualUrl);
-
-        Assert.assertTrue(isHome, "User not redirected to Home page");
-        System.out.println("redirected to Home page successfully");
+    @BeforeMethod
+    public void init() {
+        loginPage = new LoginPage(page);
+        homePage = new HomePage(page);
     }
 
+    @Test(priority = 1)
+    public void tanakaLogin() {
+
+        loginPage.login("admin", "admin");
+
+        Assert.assertTrue(homePage.isUserOnHomePage(),
+                "User not redirected to Home page");
+
+        System.out.println("Login successful");
+    }
+
+    @Test(priority = 2)
+    public void searchOneInput() {
+        homePage.search_With_One_Input("test");
+    }
 }

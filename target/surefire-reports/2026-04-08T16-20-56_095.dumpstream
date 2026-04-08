@@ -1,0 +1,5 @@
+# Created at 2026-04-08T16:20:56.605
+Boot Manifest-JAR contains absolute paths in classpath 'd:\Tanaka-wiki\tanakawiki\tanakaautomation-1\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

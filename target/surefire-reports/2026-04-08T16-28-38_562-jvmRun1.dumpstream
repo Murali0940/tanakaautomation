@@ -1,0 +1,11 @@
+# Created at 2026-04-08T16:29:05.379
+Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-11042730437443801022\package\lib\server\dispatchers\dispatcher.js:273:44)
+    at transport.onmessage (C:\Users\DELL\AppData\Local\Temp\playwright-java-11042730437443801022\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\DELL\AppData\Local\Temp\playwright-java-11042730437443801022\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:478:21)
+}
+

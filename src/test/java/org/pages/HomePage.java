@@ -1,28 +1,26 @@
 package org.pages;
 
-import java.time.Duration;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import com.microsoft.playwright.Page;
 
 public class HomePage {
 
-    WebDriver driver;
-    WebDriverWait wait;
+    private Page page;
 
-    public HomePage(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    public HomePage(Page page) {
+        this.page = page;
     }
 
     public boolean isUserOnHomePage() {
-        wait.until(ExpectedConditions.urlContains("/home"));
-        return driver.getCurrentUrl().contains("/home");
+        page.waitForURL("**/home");
+        return page.url().contains("/home");
     }
 
     public String getCurrentUrl() {
-        return driver.getCurrentUrl();
+        return page.url();
     }
 
+    public void search_With_One_Input(String input) {
+        page.locator("//input[@id='home-search-input' or @placeholder='Wiki内を検索']")
+                .fill(input);
+    }
 }

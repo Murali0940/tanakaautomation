@@ -23,19 +23,13 @@ public class TestListener implements ITestListener {
 
         test.fail(result.getThrowable());
 
-        String path = ScreenshotUtil.capture(BaseClass.driver, result.getName());
+        String path = ScreenshotUtil.capture(BaseClass.page, result.getName());
 
-        if (path != null) {
-            test.addScreenCaptureFromPath(path);
-        }
+        test.addScreenCaptureFromPath(path);
     }
 
     public void onFinish(ITestContext context) {
-
         extent.flush();
-
-        // ✅ SEND EMAIL AFTER EXECUTION
         EmailUtil.sendReport();
     }
-
 }
