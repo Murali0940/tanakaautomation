@@ -36,5 +36,6 @@ public class LoginTest extends BaseClass {
     @Test(priority = 3)
     public void searchTwoInput() {
         homePage.search_With_Two_Input("test,article");
-    
+    }
+
 }
