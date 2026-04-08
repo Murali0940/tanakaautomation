@@ -15,7 +15,7 @@ public class BaseClass {
         playwright = Playwright.create();
 
         browser = playwright.chromium().launch(
-                new BrowserType.LaunchOptions().setHeadless(true) // Jenkins ready
+                new BrowserType.LaunchOptions().setHeadless(false) // Jenkins ready
         );
 
         context = browser.newContext();
