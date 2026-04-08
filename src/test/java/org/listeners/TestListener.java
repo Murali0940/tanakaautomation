@@ -13,6 +13,7 @@ public class TestListener implements ITestListener {
 
     public void onTestStart(ITestResult result) {
         test = extent.createTest(result.getName());
+        LogUtil.test = test;
     }
 
     public void onTestSuccess(ITestResult result) {
