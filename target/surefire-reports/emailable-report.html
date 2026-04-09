@@ -9,57 +9,61 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Surefire suite</th></tr>
-<tr><td><a href="#t0">Surefire test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">74,255</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Surefire test</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">110,689</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">org.tests.LoginTest</td><td><a href="#m0">searchOneInput</a></td><td rowspan="1">1775645501668</td><td rowspan="1">30029</td></tr><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">org.tests.LoginTest</td><td><a href="#m1">tanakaLogin</a></td><td rowspan="1">1775645497546</td><td rowspan="1">1202</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">org.tests.LoginTest</td><td><a href="#m0">search_Within_Category_Using_Title</a></td><td rowspan="1">1775756049443</td><td rowspan="1">30011</td></tr><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">org.tests.LoginTest</td><td><a href="#m1">search_With_Content</a></td><td rowspan="1">1775755986017</td><td rowspan="1">15676</td></tr><tr class="passedeven"><td><a href="#m2">search_With_Title</a></td><td rowspan="1">1775755969127</td><td rowspan="1">16875</td></tr><tr class="passedeven"><td><a href="#m3">search_With_Title_And_Content</a></td><td rowspan="1">1775756001700</td><td rowspan="1">15876</td></tr><tr class="passedeven"><td><a href="#m4">search_With_Title_And_Content_Using_AND_Operation</a></td><td rowspan="1">1775756017583</td><td rowspan="1">16301</td></tr><tr class="passedeven"><td><a href="#m5">search_With_Title_And_Content_Using_OR_Operation</a></td><td rowspan="1">1775756033893</td><td rowspan="1">15543</td></tr></tbody>
 </table>
-<h2>Surefire test</h2><h3 id="m0">org.tests.LoginTest#searchOneInput</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.microsoft.playwright.TimeoutError: Error {
+<h2>Surefire test</h2><h3 id="m0">org.tests.LoginTest#search_Within_Category_Using_Title</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.microsoft.playwright.TimeoutError: Error {
   message=&apos;Timeout 30000ms exceeded.
   name=&apos;TimeoutError
   stack=&apos;TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-16071541716542607024\package\lib\server\progress.js:78:26)
-    at Frame.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-16071541716542607024\package\lib\server\frames.js:1046:23)
-    at FrameDispatcher.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-16071541716542607024\package\lib\server\dispatchers\frameDispatcher.js:170:30)
-    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-16071541716542607024\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-16071541716542607024\package\lib\server\dispatchers\dispatcher.js:361:39)
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-8247064885996755213\package\lib\server\progress.js:78:26)
+    at Frame.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-8247064885996755213\package\lib\server\frames.js:1001:23)
+    at FrameDispatcher.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-8247064885996755213\package\lib\server\dispatchers\frameDispatcher.js:158:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-8247064885996755213\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-8247064885996755213\package\lib\server\dispatchers\dispatcher.js:361:39)
 }
 Call log:
-- waiting for locator(&quot;//input[@id=&apos;home-search-input&apos; or @placeholder=&apos;Wiki内を検索&apos;]&quot;)
+- waiting for locator(&quot;//div[@id=&apos;category-tab&apos; and text()=&apos;9999.テスト用カテゴリ&apos;]&quot;)
 
 	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
 	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
 	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
 	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
-	at com.microsoft.playwright.impl.FrameImpl.fillImpl(FrameImpl.java:335)
-	at com.microsoft.playwright.impl.FrameImpl.lambda$fill$14(FrameImpl.java:325)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
 	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
 	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
 	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
 	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
-	at com.microsoft.playwright.impl.FrameImpl.fill(FrameImpl.java:325)
-	at com.microsoft.playwright.impl.LocatorImpl.fill(LocatorImpl.java:235)
-	at com.microsoft.playwright.Locator.fill(Locator.java:3046)
-	at org.pages.HomePage.search_With_One_Input(HomePage.java:24)
-	at org.tests.LoginTest.searchOneInput(LoginTest.java:33)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:160)
+	at com.microsoft.playwright.Locator.click(Locator.java:2460)
+	at org.pages.SearchFunction.searchWithinCategoryUsingTitle(SearchFunction.java:180)
+	at org.tests.LoginTest.search_Within_Category_Using_Title(LoginTest.java:44)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 Caused by: com.microsoft.playwright.TimeoutError: Error {
   message=&apos;Timeout 30000ms exceeded.
   name=&apos;TimeoutError
   stack=&apos;TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-16071541716542607024\package\lib\server\progress.js:78:26)
-    at Frame.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-16071541716542607024\package\lib\server\frames.js:1046:23)
-    at FrameDispatcher.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-16071541716542607024\package\lib\server\dispatchers\frameDispatcher.js:170:30)
-    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-16071541716542607024\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-16071541716542607024\package\lib\server\dispatchers\dispatcher.js:361:39)
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-8247064885996755213\package\lib\server\progress.js:78:26)
+    at Frame.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-8247064885996755213\package\lib\server\frames.js:1001:23)
+    at FrameDispatcher.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-8247064885996755213\package\lib\server\dispatchers\frameDispatcher.js:158:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-8247064885996755213\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-8247064885996755213\package\lib\server\dispatchers\dispatcher.js:361:39)
 }
 Call log:
-- waiting for locator(&quot;//input[@id=&apos;home-search-input&apos; or @placeholder=&apos;Wiki内を検索&apos;]&quot;)
+- waiting for locator(&quot;//div[@id=&apos;category-tab&apos; and text()=&apos;9999.テスト用カテゴリ&apos;]&quot;)
 
 	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
 	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
 	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
 	... 44 more
 ... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">org.tests.LoginTest#tanakaLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">org.tests.LoginTest#search_With_Content</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">org.tests.LoginTest#search_With_Title</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">org.tests.LoginTest#search_With_Title_And_Content</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">org.tests.LoginTest#search_With_Title_And_Content_Using_AND_Operation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">org.tests.LoginTest#search_With_Title_And_Content_Using_OR_Operation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

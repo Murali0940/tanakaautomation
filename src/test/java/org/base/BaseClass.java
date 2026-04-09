@@ -1,6 +1,7 @@
 package org.base;
 
 import com.microsoft.playwright.*;
+
 import org.testng.annotations.*;
 
 public class BaseClass {
@@ -22,6 +23,9 @@ public class BaseClass {
         page = context.newPage();
 
         page.navigate("https://tanaka-wiki.com/");
+
+        org.pages.LoginPage loginPage = new org.pages.LoginPage(page);
+        loginPage.login("admin", "admin");
     }
 
     @AfterSuite

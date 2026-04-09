@@ -8,7 +8,7 @@
           <include name="init"/>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="searchOneInput"/>
+          <include name="search_Within_Category_Using_Title"/>
         </methods>
       </class> <!-- org.tests.LoginTest -->
     </classes>

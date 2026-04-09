@@ -2,7 +2,6 @@ org\base\BaseClass.class
 org\utils\ScreenshotUtil.class
 org\pages\LoginPage.class
 org\utils\EmailUtil.class
-org\pages\HomePage.class
 org\utils\ExtentManager.class
 org\listeners\TestListener.class
 org\tests\LoginTest.class

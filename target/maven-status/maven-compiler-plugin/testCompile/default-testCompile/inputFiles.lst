@@ -1,8 +1,10 @@
+D:\Tanaka-wiki\tanakawiki\tanakaautomation-1\src\test\java\org\pages\SearchFunction.java
 D:\Tanaka-wiki\tanakawiki\tanakaautomation-1\src\test\java\org\utils\ExtentManager.java
 D:\Tanaka-wiki\tanakawiki\tanakaautomation-1\src\test\java\org\pages\LoginPage.java
 D:\Tanaka-wiki\tanakawiki\tanakaautomation-1\src\test\java\org\utils\EmailUtil.java
-D:\Tanaka-wiki\tanakawiki\tanakaautomation-1\src\test\java\org\pages\HomePage.java
+D:\Tanaka-wiki\tanakawiki\tanakaautomation-1\src\test\java\org\utils\LogUtil.java
 D:\Tanaka-wiki\tanakawiki\tanakaautomation-1\src\test\java\org\utils\ScreenshotUtil.java
 D:\Tanaka-wiki\tanakawiki\tanakaautomation-1\src\test\java\org\base\BaseClass.java
+D:\Tanaka-wiki\tanakawiki\tanakaautomation-1\src\test\java\org\pages\BasePage.java
 D:\Tanaka-wiki\tanakawiki\tanakaautomation-1\src\test\java\org\listeners\TestListener.java
 D:\Tanaka-wiki\tanakawiki\tanakaautomation-1\src\test\java\org\tests\LoginTest.java
