@@ -42,6 +42,11 @@ public class LoginTest extends BaseClass {
         homePage.searchWithContent("purpose");
     }
 
+    @Test(priority = 4)
+    public void search_With_Title_And_Content() {
+        homePage.searchWithTitleAndContent("test,purpose");
+    }
+
     // @Test(priority = 3)
     // public void searchFunction_With_AND_Operation() {
     // homePage.search_With_TitleandContent_Using_AND_Operation("test,article");

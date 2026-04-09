@@ -68,6 +68,27 @@ public class SearchFunction {
         page.waitForTimeout(15000);
     }
 
+    public void searchWithTitleAndContent(String titleandContent) {
+        Locator titleSearch = page.locator("#title-search");
+        if (!titleSearch.isChecked()) {
+            titleSearch.check();
+        }
+
+        Locator contentSearch = page.locator("#content-search");
+        if (!contentSearch.isChecked()) {
+            contentSearch.check();
+        }
+        search = page.locator("//input[@id='home-search-input' or @placeholder='Wiki内を検索']");
+        search.clear();
+        search.fill(titleandContent);
+        LogUtil.info("keyword entered");
+
+        page.locator("//button[text()='検索']").click();
+        LogUtil.info("search button clicked");
+        LogUtil.info("Keyword highlighted/visible successfully.");
+        page.waitForTimeout(15000);
+    }
+
     // public void search_With_TitleandContent_Using_AND_Operation(String
     // titlecontent) {
 
