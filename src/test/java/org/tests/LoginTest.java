@@ -11,12 +11,12 @@ import org.utils.LogUtil;
 public class LoginTest extends BaseClass {
 
     LoginPage loginPage;
-    HomePage homePage;
+    SearchFunction homePage;
 
     @BeforeMethod
     public void init() {
         loginPage = new LoginPage(page);
-        homePage = new HomePage(page);
+        homePage = new SearchFunction(page);
     }
 
     @Test(priority = 1)
@@ -33,13 +33,23 @@ public class LoginTest extends BaseClass {
     }
 
     @Test(priority = 2)
-    public void searchOneInput() {
-        homePage.search_With_One_Input("test");
+    public void search_With_Title() {
+        homePage.searchWithTitle("Test2article");
     }
 
     @Test(priority = 3)
-    public void searchTwoInput() {
-        homePage.search_With_Two_Input("test,article");
+    public void search_With_Content() {
+        homePage.searchWithContent("purpose");
     }
+
+    // @Test(priority = 3)
+    // public void searchFunction_With_AND_Operation() {
+    // homePage.search_With_TitleandContent_Using_AND_Operation("test,article");
+    // }
+
+    // @Test(priority = 4)
+    // public void searchFunction_With_OR_Operation() {
+    // homePage.search_With_TitleandContent_Using_OR_Operation("test,purpose");
+    // }
 
 }
