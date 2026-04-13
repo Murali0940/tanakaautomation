@@ -195,21 +195,48 @@ public class SearchFunction {
         }
         LogUtil.info("content search checkbox unchecked");
 
+        search = page.locator("//input[@id='home-search-input' or @placeholder='Wiki内を検索']");
+        search.clear();
+        search.fill(text);
+        LogUtil.info("keyword entered");
+
+        page.locator("//button[text()='検索']").click();
+        LogUtil.info("search button clicked");
+        LogUtil.info("Keyword highlighted/visible successfully.");
+        page.waitForTimeout(15000);
+
+    }
+
+    public void searchWithinCategoryUsingContent(String string) {
+        LogUtil.info("*****search within category using content*****");
+
+        page.locator("#searchin-category").click();
+        LogUtil.info("search in category checkbox checked");
+
+        LogUtil.info("Selecting Category");
+        Locator item = page.locator("li").filter(new Locator.FilterOptions().setHasText("9999"));
+        item.click();
+        LogUtil.info("Category selected");
+        Locator titleSearch = page.locator("#title-search");
+        if (titleSearch.isChecked()) {
+            titleSearch.uncheck();
+        }
+        LogUtil.info("title search checkbox unchecked");
+
+        Locator contentSearch = page.locator("#content-search");
+        if (!contentSearch.isChecked()) {
+            contentSearch.check();
+        }
+        LogUtil.info("content search checkbox checked");
+
         orSearch = page.locator("#or-search");
         if (!orSearch.isChecked()) {
             orSearch.check();
         }
-        LogUtil.info("OR search checkbox checked");
-
-        andSearch = page.locator("#and-search");
-        if (andSearch.isChecked()) {
-            andSearch.uncheck();
-        }
-        LogUtil.info("AND search checkbox unchecked");
 
         search = page.locator("//input[@id='home-search-input' or @placeholder='Wiki内を検索']");
         search.clear();
-        search.fill(text);
+        search.fill(string);
         LogUtil.info("keyword entered");
 
         page.locator("//button[text()='検索']").click();

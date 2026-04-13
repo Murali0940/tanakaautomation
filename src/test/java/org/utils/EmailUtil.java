@@ -19,9 +19,10 @@ public class EmailUtil {
             email.setSmtpPort(587);
 
             // 🔐 Use App Password (IMPORTANT)
-            email.setAuthenticator(new DefaultAuthenticator("murali@a-tkg.co.in", "uxtm mcxr umaf jzxq"));
+            email.setAuthenticator(new DefaultAuthenticator("murali@a-tkg.co.in", "xzsjjzbffhvqoxvq"));
 
             email.setStartTLSEnabled(true);
+            // email.setSSLOnConnect(true);
 
             email.setFrom("murali@a-tkg.co.in");
             email.setSubject("Automation Test Report");

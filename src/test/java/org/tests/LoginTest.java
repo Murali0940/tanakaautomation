@@ -44,4 +44,9 @@ public class LoginTest extends BaseClass {
         homePage.searchWithinCategoryUsingTitle("test");
     }
 
+    @Test(priority = 7)
+    public void search_Within_Category_Using_Content() {
+        homePage.searchWithinCategoryUsingContent("purpose");
+    }
+
 }
