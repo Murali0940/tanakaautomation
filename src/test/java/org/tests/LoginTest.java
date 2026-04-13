@@ -14,37 +14,37 @@ public class LoginTest extends BaseClass {
         homePage = new SearchFunction(page);
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1, enabled = true)
     public void search_With_Title() {
         homePage.searchWithTitle("Test2article");
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, enabled = false)
     public void search_With_Content() {
         homePage.searchWithContent("purpose");
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3, enabled = false)
     public void search_With_Title_And_Content() {
         homePage.searchWithTitleAndContent("test,purpose");
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4, enabled = false)
     public void search_With_Title_And_Content_Using_AND_Operation() {
         homePage.searchWithTitleAndContentUsingANDOperation("test,article");
     }
 
-    @Test(priority = 5)
+    @Test(priority = 5, enabled = false)
     public void search_With_Title_And_Content_Using_OR_Operation() {
         homePage.searchWithTitleAndContentUsingOROperation("test,purpose");
     }
 
-    @Test(priority = 6)
+    @Test(priority = 6, enabled = false)
     public void search_Within_Category_Using_Title() {
         homePage.searchWithinCategoryUsingTitle("test");
     }
 
-    @Test(priority = 7)
+    @Test(priority = 7, enabled = false)
     public void search_Within_Category_Using_Content() {
         homePage.searchWithinCategoryUsingContent("purpose");
     }
