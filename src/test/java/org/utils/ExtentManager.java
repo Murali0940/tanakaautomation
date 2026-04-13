@@ -15,10 +15,11 @@ public class ExtentManager {
 
         if (extent == null) {
 
-            String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
+            // String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new
+            // Date());
 
             reportPath = System.getProperty("user.dir") +
-                    "/reports/extent-report_" + timestamp + ".html";
+                    "/reports/extent-report.html";
 
             ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
 
