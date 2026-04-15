@@ -3,9 +3,6 @@ package org.utils;
 import com.aventstack.extentreports.*;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 public class ExtentManager {
 
     public static ExtentReports extent;
